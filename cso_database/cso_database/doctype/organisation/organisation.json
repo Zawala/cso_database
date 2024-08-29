@@ -1,0 +1,427 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:organizational_name",
+ "creation": "2024-08-28 12:03:17.023028",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_2_tab",
+  "organisation_data_section",
+  "organizational_name",
+  "column_break_ajnf",
+  "acronym",
+  "registration_section",
+  "status",
+  "column_break_dzaq",
+  "number",
+  "organization_contact_info_section",
+  "phone_number",
+  "column_break_edgg",
+  "email_address",
+  "section_break_muur",
+  "social_media_handles",
+  "location_section",
+  "physical_address",
+  "district",
+  "gps",
+  "column_break_ussi",
+  "province",
+  "ward",
+  "contact_person_section",
+  "table_nnex",
+  "about_information_section",
+  "year_of_establishment",
+  "column_break_mlip",
+  "section_break_kzhl",
+  "background",
+  "aim_core_business",
+  "column_break_xgkq",
+  "mission",
+  "vision",
+  "focus_area_section",
+  "thermatic_area",
+  "programs_currently_running",
+  "column_break_nqhc",
+  "description",
+  "section_break_morj",
+  "ovc",
+  "kp",
+  "health",
+  "gender",
+  "advocacy",
+  "column_break_gxol",
+  "programs_clusterspecify",
+  "otherprograms_cluster",
+  "role_and_funding_section",
+  "organisation_rolespecific_interventions",
+  "grants",
+  "column_break_dlih",
+  "current_funding",
+  "membership_section",
+  "zan",
+  "nango",
+  "nac",
+  "mopslsw",
+  "column_break_szmn",
+  "data_wnkk",
+  "other",
+  "directors_details_section",
+  "table_aikq"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "organisation_data_section",
+   "fieldtype": "Section Break",
+   "label": "Organisation Data"
+  },
+  {
+   "fieldname": "organizational_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organizational Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ajnf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acronym",
+   "fieldtype": "Data",
+   "label": "Acronym",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "REGISTRATION"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dzaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Phone",
+   "label": "Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization_contact_info_section",
+   "fieldtype": "Section Break",
+   "label": "ORGANIZATION CONTACT INFO"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_edgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_muur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "social_media_handles",
+   "fieldtype": "Table",
+   "label": "Social Media Handles",
+   "options": "Social Media Handles"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "LOCATION"
+  },
+  {
+   "fieldname": "physical_address",
+   "fieldtype": "Data",
+   "label": "Physical Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gps",
+   "fieldtype": "Geolocation",
+   "label": "GPS"
+  },
+  {
+   "fieldname": "column_break_ussi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Data",
+   "label": "Province",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "Ward",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_person_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "table_nnex",
+   "fieldtype": "Table",
+   "options": "Contact Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "about_information_section",
+   "fieldtype": "Section Break",
+   "label": "ABOUT INFORMATION"
+  },
+  {
+   "fieldname": "year_of_establishment",
+   "fieldtype": "Int",
+   "label": "Year of Establishment"
+  },
+  {
+   "fieldname": "column_break_mlip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "directors_details_section",
+   "fieldtype": "Section Break",
+   "label": "DIRECTORS DETAILS"
+  },
+  {
+   "fieldname": "table_aikq",
+   "fieldtype": "Table",
+   "options": "DIRECTORS DETAILS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_section",
+   "fieldtype": "Section Break",
+   "label": "MEMBERSHIP"
+  },
+  {
+   "default": "0",
+   "fieldname": "zan",
+   "fieldtype": "Check",
+   "label": "ZAN"
+  },
+  {
+   "default": "0",
+   "fieldname": "nango",
+   "fieldtype": "Check",
+   "label": "NANGO"
+  },
+  {
+   "default": "0",
+   "fieldname": "nac",
+   "fieldtype": "Check",
+   "label": "NAC"
+  },
+  {
+   "default": "0",
+   "fieldname": "mopslsw",
+   "fieldtype": "Check",
+   "label": "MoPSLSW"
+  },
+  {
+   "fieldname": "column_break_szmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_wnkk",
+   "fieldtype": "Data",
+   "label": "other(specify)"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "role_and_funding_section",
+   "fieldtype": "Section Break",
+   "label": "ROLE And FUNDING"
+  },
+  {
+   "fieldname": "organisation_rolespecific_interventions",
+   "fieldtype": "Data",
+   "label": "Organisation Role/Specific Interventions"
+  },
+  {
+   "fieldname": "grants",
+   "fieldtype": "Long Text",
+   "label": "Grants"
+  },
+  {
+   "fieldname": "column_break_dlih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_funding",
+   "fieldtype": "Data",
+   "label": "Current Funding"
+  },
+  {
+   "fieldname": "focus_area_section",
+   "fieldtype": "Section Break",
+   "label": "FOCUS AREA"
+  },
+  {
+   "fieldname": "thermatic_area",
+   "fieldtype": "Data",
+   "label": "Thermatic Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "programs_currently_running",
+   "fieldtype": "Data",
+   "label": "Programs Currently Running",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nqhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_morj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ovc",
+   "fieldtype": "Check",
+   "label": "OVC"
+  },
+  {
+   "default": "0",
+   "fieldname": "kp",
+   "fieldtype": "Check",
+   "label": "KP"
+  },
+  {
+   "default": "0",
+   "fieldname": "health",
+   "fieldtype": "Check",
+   "label": "Health"
+  },
+  {
+   "default": "0",
+   "fieldname": "gender",
+   "fieldtype": "Check",
+   "label": "Gender"
+  },
+  {
+   "default": "0",
+   "fieldname": "advocacy",
+   "fieldtype": "Check",
+   "label": "Advocacy"
+  },
+  {
+   "fieldname": "column_break_gxol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "programs_clusterspecify",
+   "fieldtype": "Data",
+   "label": "Programs Cluster(specify)"
+  },
+  {
+   "default": "0",
+   "fieldname": "otherprograms_cluster",
+   "fieldtype": "Check",
+   "label": "Other(Programs Cluster)"
+  },
+  {
+   "fieldname": "section_break_kzhl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "background",
+   "fieldtype": "Text Editor",
+   "label": "Background"
+  },
+  {
+   "fieldname": "aim_core_business",
+   "fieldtype": "Text Editor",
+   "label": "Aim (Core Business)"
+  },
+  {
+   "fieldname": "column_break_xgkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mission",
+   "fieldtype": "Text Editor",
+   "label": "Mission"
+  },
+  {
+   "fieldname": "vision",
+   "fieldtype": "Text Editor",
+   "label": "Vision"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-29 09:10:08.914109",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Organisation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
