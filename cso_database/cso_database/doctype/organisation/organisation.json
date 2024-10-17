@@ -24,12 +24,7 @@
   "section_break_muur",
   "social_media_handles",
   "location_section",
-  "physical_address",
-  "district",
-  "gps",
-  "column_break_ussi",
-  "province",
-  "ward",
+  "location",
   "contact_person_section",
   "table_nnex",
   "about_information_section",
@@ -42,10 +37,7 @@
   "mission",
   "vision",
   "focus_area_section",
-  "thermatic_area",
-  "programs_currently_running",
-  "column_break_nqhc",
-  "description",
+  "table_lozm",
   "section_break_morj",
   "ovc",
   "kp",
@@ -117,7 +109,7 @@
   },
   {
    "fieldname": "number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Number",
    "reqd": 1
   },
@@ -156,39 +148,6 @@
    "fieldname": "location_section",
    "fieldtype": "Section Break",
    "label": "LOCATION"
-  },
-  {
-   "fieldname": "physical_address",
-   "fieldtype": "Data",
-   "label": "Physical Address",
-   "reqd": 1
-  },
-  {
-   "fieldname": "district",
-   "fieldtype": "Data",
-   "label": "District ",
-   "reqd": 1
-  },
-  {
-   "fieldname": "gps",
-   "fieldtype": "Geolocation",
-   "label": "GPS"
-  },
-  {
-   "fieldname": "column_break_ussi",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "province",
-   "fieldtype": "Data",
-   "label": "Province",
-   "reqd": 1
-  },
-  {
-   "fieldname": "ward",
-   "fieldtype": "Data",
-   "label": "Ward",
-   "reqd": 1
   },
   {
    "fieldname": "contact_person_section",
@@ -300,28 +259,6 @@
    "label": "FOCUS AREA"
   },
   {
-   "fieldname": "thermatic_area",
-   "fieldtype": "Data",
-   "label": "Thermatic Area",
-   "reqd": 1
-  },
-  {
-   "fieldname": "programs_currently_running",
-   "fieldtype": "Data",
-   "label": "Programs Currently Running",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_nqhc",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Data",
-   "label": "Description",
-   "reqd": 1
-  },
-  {
    "fieldname": "section_break_morj",
    "fieldtype": "Section Break"
   },
@@ -397,11 +334,22 @@
    "fieldname": "vision",
    "fieldtype": "Text Editor",
    "label": "Vision"
+  },
+  {
+   "fieldname": "table_lozm",
+   "fieldtype": "Table",
+   "options": "Focus Area"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table",
+   "label": "Location",
+   "options": "Location"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-29 09:10:08.914109",
+ "modified": "2024-09-24 15:04:42.259042",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",

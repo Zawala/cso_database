@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 14:50:53.122411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "thermatic_area",
+  "description",
+  "column_break_dzyp",
+  "programs_currently_running"
+ ],
+ "fields": [
+  {
+   "fieldname": "thermatic_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Thermatic Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_dzyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "programs_currently_running",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Programs Currently Running",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-24 14:52:30.740239",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Focus Area",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
