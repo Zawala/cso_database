@@ -14,9 +14,10 @@
  "fields": [
   {
    "fieldname": "thermatic_area",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Thermatic Area",
+   "options": "Disabilities\nEmergencies\nSRHR\nWomen rights\nGender\nMaternal health\nHealth related research\nNon communicable diseases\nTB\nMalaria\nHIV\nSupport groups\nHealth information systems\nKey population SPECIFY\nLGBTIQ\nHealth Advocacy\nCommunity Led Monitoring (CLM)\nWater and Sanitation",
    "reqd": 1
   },
   {
@@ -39,7 +40,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-24 14:52:30.740239",
+ "modified": "2024-10-23 11:56:24.549354",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Focus Area",

@@ -1,0 +1,35 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-23 12:01:50.443805",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "memberships"
+ ],
+ "fields": [
+  {
+   "fieldname": "memberships",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Memberships",
+   "options": "DAC\nCCM\nGFF\nNASCOH\nChild Rights Coalition\nSADC Health Protocol\nAfrica Union\nInternational Health Networks (specify)\nZNNP+"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-23 12:03:00.125816",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Membership",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

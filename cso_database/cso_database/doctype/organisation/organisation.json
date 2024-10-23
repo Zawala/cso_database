@@ -15,8 +15,11 @@
   "acronym",
   "registration_section",
   "status",
+  "registration_type",
+  "cso_geoscheme",
   "column_break_dzaq",
   "number",
+  "sector_type",
   "organization_contact_info_section",
   "phone_number",
   "column_break_edgg",
@@ -38,28 +41,14 @@
   "vision",
   "focus_area_section",
   "table_lozm",
-  "section_break_morj",
-  "ovc",
-  "kp",
-  "health",
-  "gender",
-  "advocacy",
-  "column_break_gxol",
-  "programs_clusterspecify",
-  "otherprograms_cluster",
+  "membership_section",
+  "table_zpwh",
   "role_and_funding_section",
   "organisation_rolespecific_interventions",
   "grants",
   "column_break_dlih",
   "current_funding",
-  "membership_section",
-  "zan",
-  "nango",
-  "nac",
-  "mopslsw",
-  "column_break_szmn",
-  "data_wnkk",
-  "other",
+  "audited_financial_statements",
   "directors_details_section",
   "table_aikq"
  ],
@@ -191,45 +180,6 @@
    "label": "MEMBERSHIP"
   },
   {
-   "default": "0",
-   "fieldname": "zan",
-   "fieldtype": "Check",
-   "label": "ZAN"
-  },
-  {
-   "default": "0",
-   "fieldname": "nango",
-   "fieldtype": "Check",
-   "label": "NANGO"
-  },
-  {
-   "default": "0",
-   "fieldname": "nac",
-   "fieldtype": "Check",
-   "label": "NAC"
-  },
-  {
-   "default": "0",
-   "fieldname": "mopslsw",
-   "fieldtype": "Check",
-   "label": "MoPSLSW"
-  },
-  {
-   "fieldname": "column_break_szmn",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "data_wnkk",
-   "fieldtype": "Data",
-   "label": "other(specify)"
-  },
-  {
-   "default": "0",
-   "fieldname": "other",
-   "fieldtype": "Check",
-   "label": "Other"
-  },
-  {
    "fieldname": "role_and_funding_section",
    "fieldtype": "Section Break",
    "label": "ROLE And FUNDING"
@@ -250,62 +200,14 @@
   },
   {
    "fieldname": "current_funding",
-   "fieldtype": "Data",
-   "label": "Current Funding"
+   "fieldtype": "Select",
+   "label": "Current Funding",
+   "options": "0 -1000\n1000 \u2013 10000\n10000 \u2013 50000\n50000 \u2013 100000\n100000 \u2013 500000\n500000 \u2013 1000000\n1000000 \u2013 5000000\n5000000+"
   },
   {
    "fieldname": "focus_area_section",
    "fieldtype": "Section Break",
    "label": "FOCUS AREA"
-  },
-  {
-   "fieldname": "section_break_morj",
-   "fieldtype": "Section Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "ovc",
-   "fieldtype": "Check",
-   "label": "OVC"
-  },
-  {
-   "default": "0",
-   "fieldname": "kp",
-   "fieldtype": "Check",
-   "label": "KP"
-  },
-  {
-   "default": "0",
-   "fieldname": "health",
-   "fieldtype": "Check",
-   "label": "Health"
-  },
-  {
-   "default": "0",
-   "fieldname": "gender",
-   "fieldtype": "Check",
-   "label": "Gender"
-  },
-  {
-   "default": "0",
-   "fieldname": "advocacy",
-   "fieldtype": "Check",
-   "label": "Advocacy"
-  },
-  {
-   "fieldname": "column_break_gxol",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "programs_clusterspecify",
-   "fieldtype": "Data",
-   "label": "Programs Cluster(specify)"
-  },
-  {
-   "default": "0",
-   "fieldname": "otherprograms_cluster",
-   "fieldtype": "Check",
-   "label": "Other(Programs Cluster)"
   },
   {
    "fieldname": "section_break_kzhl",
@@ -345,11 +247,42 @@
    "fieldtype": "Table",
    "label": "Location",
    "options": "Location"
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration Type ",
+   "options": "PVO\nTrust\nCooperative\nCompany",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sector_type",
+   "fieldtype": "Select",
+   "label": "Sector Type",
+   "options": "FBO\nASO\nMedia\nCBO\nYouth Org\nLabour Unions\nWomen\u2019s Orgs\nMedia\nIndependent Commissions\nCooperates\nDisability Orgs\nTertiary And Research\nMission / Private Hospitals\nMoHCC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cso_geoscheme",
+   "fieldtype": "Select",
+   "label": "CSO Geoscheme ",
+   "options": "National\nInternational"
+  },
+  {
+   "default": "0",
+   "fieldname": "audited_financial_statements",
+   "fieldtype": "Check",
+   "label": "Audited Financial Statements "
+  },
+  {
+   "fieldname": "table_zpwh",
+   "fieldtype": "Table",
+   "options": "Membership"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-24 15:04:42.259042",
+ "modified": "2024-10-23 12:05:20.510472",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",
