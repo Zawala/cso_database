@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 14:50:53.122411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "thermatic_area",
+  "description",
+  "column_break_dzyp"
+ ],
+ "fields": [
+  {
+   "fieldname": "thermatic_area",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Thermatic Area",
+   "options": "HIV\nMALARIA\nTB\nNCDs\nDISABILITY\nSRHR\nWOMEN RIGHTS\nCHILD RIGHTS\nHEALTH ADVOCACY\nOVC\nGENDER\nMARTENAL HEALTH\nHEALTH RELATED RESEARCH\nHEALTH INFORMATION SYSTEMS\nKEY POPULATION\nLGBTIQ\nDRUGS AND SUBSTANCE ABUSE\nEMERGENCIES\nMENTAL HEALTH\nCLIMATE CHANGE\nECONOMIC EMPOWERMENT\nYOUTH\nFOOD SECURITY"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_dzyp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-26 17:03:24.810163",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Focus Area",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:organizational_name",
+ "creation": "2024-08-28 12:03:17.023028",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_2_tab",
+  "organisation_data_section",
+  "organizational_name",
+  "column_break_ajnf",
+  "acronym",
+  "registration_section",
+  "status",
+  "registration_type",
+  "cso_geoscheme",
+  "column_break_dzaq",
+  "number",
+  "sector_type",
+  "organization_contact_info_section",
+  "phone_number",
+  "phone_number_alt",
+  "column_break_edgg",
+  "email_address",
+  "email_address_alt",
+  "section_break_muur",
+  "social_media_handles",
+  "location_section",
+  "location",
+  "contact_person_section",
+  "table_nnex",
+  "about_information_section",
+  "year_of_establishment",
+  "column_break_mlip",
+  "section_break_kzhl",
+  "background",
+  "aim_core_business",
+  "column_break_xgkq",
+  "mission",
+  "vision",
+  "focus_area_section",
+  "table_lozm",
+  "programs_running",
+  "membership_section",
+  "table_zpwh",
+  "role_and_funding_section",
+  "grants",
+  "column_break_dlih",
+  "current_funding",
+  "audited_financial_statements",
+  "directors_details_section",
+  "table_aikq"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "organisation_data_section",
+   "fieldtype": "Section Break",
+   "label": "Organisation Data"
+  },
+  {
+   "fieldname": "organizational_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organizational Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ajnf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acronym",
+   "fieldtype": "Data",
+   "label": "Acronym"
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "REGISTRATION"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status ",
+   "options": "Registered\nNot Registered"
+  },
+  {
+   "fieldname": "column_break_dzaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "label": "Number"
+  },
+  {
+   "fieldname": "organization_contact_info_section",
+   "fieldtype": "Section Break",
+   "label": "ORGANIZATION CONTACT INFO"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_edgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "section_break_muur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "social_media_handles",
+   "fieldtype": "Table",
+   "label": "Social Media Handles",
+   "options": "Social Media Handles"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "LOCATION"
+  },
+  {
+   "fieldname": "contact_person_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "table_nnex",
+   "fieldtype": "Table",
+   "options": "Contact Person"
+  },
+  {
+   "fieldname": "about_information_section",
+   "fieldtype": "Section Break",
+   "label": "ABOUT INFORMATION"
+  },
+  {
+   "fieldname": "year_of_establishment",
+   "fieldtype": "Int",
+   "label": "Year of Establishment"
+  },
+  {
+   "fieldname": "column_break_mlip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "directors_details_section",
+   "fieldtype": "Section Break",
+   "label": "DIRECTORS DETAILS"
+  },
+  {
+   "fieldname": "table_aikq",
+   "fieldtype": "Table",
+   "options": "DIRECTORS DETAILS"
+  },
+  {
+   "fieldname": "membership_section",
+   "fieldtype": "Section Break",
+   "label": "MEMBERSHIP"
+  },
+  {
+   "fieldname": "role_and_funding_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Overview"
+  },
+  {
+   "fieldname": "grants",
+   "fieldtype": "Long Text",
+   "label": "Grants"
+  },
+  {
+   "fieldname": "column_break_dlih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_funding",
+   "fieldtype": "Select",
+   "label": "Current Funding",
+   "options": "0 -1000\n1000 \u2013 10000\n10000 \u2013 50000\n50000 \u2013 100000\n100000 \u2013 500000\n500000 \u2013 1000000\n1000000 \u2013 5000000\n5000000+"
+  },
+  {
+   "fieldname": "focus_area_section",
+   "fieldtype": "Section Break",
+   "label": "FOCUS AREA"
+  },
+  {
+   "fieldname": "section_break_kzhl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "background",
+   "fieldtype": "Text Editor",
+   "label": "Background"
+  },
+  {
+   "fieldname": "aim_core_business",
+   "fieldtype": "Text Editor",
+   "label": "Aim (Core Business)"
+  },
+  {
+   "fieldname": "column_break_xgkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mission",
+   "fieldtype": "Text Editor",
+   "label": "Mission"
+  },
+  {
+   "fieldname": "vision",
+   "fieldtype": "Text Editor",
+   "label": "Vision"
+  },
+  {
+   "fieldname": "table_lozm",
+   "fieldtype": "Table",
+   "label": "Thematic Areas",
+   "options": "Focus Area"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "registration_type",
+   "fieldtype": "Select",
+   "label": "Registration Type ",
+   "options": "PVO\nTrust\nCooperative\nCompany"
+  },
+  {
+   "fieldname": "sector_type",
+   "fieldtype": "Select",
+   "label": "Sector Type",
+   "options": "FBO\nASO\nCBO\nCHILDREN ORGANIZATION\nYOUTH ORGANIZATION\nLABOUR UNION\nMEDIA\nWOMEN ORGANIZATION\nCOOPERATES\nDISABILITY ORGANIZATION\nTERTIARY AND RESEARCH\nMISSION HOSPITAL\nPRIVATE HOSPITAL\nNETWORKS"
+  },
+  {
+   "fieldname": "cso_geoscheme",
+   "fieldtype": "Select",
+   "label": "CSO Geoscheme ",
+   "options": "National\nInternational"
+  },
+  {
+   "default": "0",
+   "fieldname": "audited_financial_statements",
+   "fieldtype": "Check",
+   "label": "Audited Financial Statements "
+  },
+  {
+   "fieldname": "table_zpwh",
+   "fieldtype": "Table",
+   "options": "Membership"
+  },
+  {
+   "fieldname": "programs_running",
+   "fieldtype": "Table",
+   "label": "Programs Running",
+   "options": "program"
+  },
+  {
+   "fieldname": "phone_number_alt",
+   "fieldtype": "Phone",
+   "label": "Phone Number Alt"
+  },
+  {
+   "fieldname": "email_address_alt",
+   "fieldtype": "Data",
+   "label": "Email Address Alt"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-26 17:10:17.987735",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Organisation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

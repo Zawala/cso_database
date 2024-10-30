@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-24 15:00:11.786984",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "physical_address",
+  "ward",
+  "gps",
+  "column_break_drbo",
+  "district",
+  "province",
+  "headquarters"
+ ],
+ "fields": [
+  {
+   "fieldname": "physical_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Physical Address"
+  },
+  {
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "label": "Ward"
+  },
+  {
+   "fieldname": "gps",
+   "fieldtype": "Data",
+   "label": "GPS"
+  },
+  {
+   "fieldname": "column_break_drbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Province",
+   "options": "Harare\nBulawayo\nManicaland\nMashonaland Central\nMashonaland East\nMashonaland West\nMasvingo\nMatabeleland North\nMatabeleland South\nMidlands"
+  },
+  {
+   "default": "0",
+   "fieldname": "headquarters",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Headquarters"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-26 17:04:18.527806",
+ "modified_by": "Administrator",
+ "module": "Cso Database",
+ "name": "Location",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
