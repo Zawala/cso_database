@@ -10,6 +10,7 @@
  "field_order": [
   "tab_2_tab",
   "organisation_data_section",
+  "logo",
   "organizational_name",
   "column_break_ajnf",
   "acronym",
@@ -70,6 +71,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Organizational Name",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -79,7 +81,8 @@
   {
    "fieldname": "acronym",
    "fieldtype": "Data",
-   "label": "Acronym"
+   "label": "Acronym",
+   "reqd": 1
   },
   {
    "fieldname": "registration_section",
@@ -109,7 +112,8 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
-   "label": "Phone Number"
+   "label": "Phone Number",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_edgg",
@@ -118,7 +122,8 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address"
+   "label": "Email Address",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_muur",
@@ -143,7 +148,8 @@
   {
    "fieldname": "table_nnex",
    "fieldtype": "Table",
-   "options": "Contact Person"
+   "options": "Contact Person",
+   "reqd": 1
   },
   {
    "fieldname": "about_information_section",
@@ -167,7 +173,8 @@
   {
    "fieldname": "table_aikq",
    "fieldtype": "Table",
-   "options": "DIRECTORS DETAILS"
+   "options": "DIRECTORS DETAILS",
+   "reqd": 1
   },
   {
    "fieldname": "membership_section",
@@ -243,13 +250,15 @@
    "fieldname": "registration_type",
    "fieldtype": "Select",
    "label": "Registration Type ",
-   "options": "PVO\nTrust\nCooperative\nCompany"
+   "options": "PVO\nTrust\nCooperative\nCompany",
+   "reqd": 1
   },
   {
    "fieldname": "sector_type",
    "fieldtype": "Select",
    "label": "Sector Type",
-   "options": "FBO\nASO\nCBO\nCHILDREN ORGANIZATION\nYOUTH ORGANIZATION\nLABOUR UNION\nMEDIA\nWOMEN ORGANIZATION\nCOOPERATES\nDISABILITY ORGANIZATION\nTERTIARY AND RESEARCH\nMISSION HOSPITAL\nPRIVATE HOSPITAL\nNETWORKS"
+   "options": "FBO\nASO\nCBO\nCHILDREN ORGANIZATION\nYOUTH ORGANIZATION\nLABOUR UNION\nMEDIA\nWOMEN ORGANIZATION\nCOOPERATES\nDISABILITY ORGANIZATION\nTERTIARY AND RESEARCH\nMISSION HOSPITAL\nPRIVATE HOSPITAL\nNETWORKS",
+   "reqd": 1
   },
   {
    "fieldname": "cso_geoscheme",
@@ -283,11 +292,16 @@
    "fieldname": "email_address_alt",
    "fieldtype": "Data",
    "label": "Email Address Alt"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-26 17:10:17.987735",
+ "modified": "2024-11-04 05:54:53.950107",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",
