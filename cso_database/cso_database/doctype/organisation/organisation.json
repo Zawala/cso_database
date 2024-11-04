@@ -71,7 +71,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Organizational Name",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -81,8 +80,7 @@
   {
    "fieldname": "acronym",
    "fieldtype": "Data",
-   "label": "Acronym",
-   "reqd": 1
+   "label": "Acronym"
   },
   {
    "fieldname": "registration_section",
@@ -112,8 +110,7 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
-   "label": "Phone Number",
-   "reqd": 1
+   "label": "Phone Number"
   },
   {
    "fieldname": "column_break_edgg",
@@ -122,8 +119,7 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address",
-   "reqd": 1
+   "label": "Email Address"
   },
   {
    "fieldname": "section_break_muur",
@@ -148,8 +144,7 @@
   {
    "fieldname": "table_nnex",
    "fieldtype": "Table",
-   "options": "Contact Person",
-   "reqd": 1
+   "options": "Contact Person"
   },
   {
    "fieldname": "about_information_section",
@@ -173,8 +168,7 @@
   {
    "fieldname": "table_aikq",
    "fieldtype": "Table",
-   "options": "DIRECTORS DETAILS",
-   "reqd": 1
+   "options": "DIRECTORS DETAILS"
   },
   {
    "fieldname": "membership_section",
@@ -250,15 +244,13 @@
    "fieldname": "registration_type",
    "fieldtype": "Select",
    "label": "Registration Type ",
-   "options": "PVO\nTrust\nCooperative\nCompany",
-   "reqd": 1
+   "options": "PVO\nTrust\nCooperative\nCompany"
   },
   {
    "fieldname": "sector_type",
    "fieldtype": "Select",
    "label": "Sector Type",
-   "options": "FBO\nASO\nCBO\nCHILDREN ORGANIZATION\nYOUTH ORGANIZATION\nLABOUR UNION\nMEDIA\nWOMEN ORGANIZATION\nCOOPERATES\nDISABILITY ORGANIZATION\nTERTIARY AND RESEARCH\nMISSION HOSPITAL\nPRIVATE HOSPITAL\nNETWORKS",
-   "reqd": 1
+   "options": "FBO\nASO\nCBO\nCHILDREN ORGANIZATION\nYOUTH ORGANIZATION\nLABOUR UNION\nMEDIA\nWOMEN ORGANIZATION\nCOOPERATES\nDISABILITY ORGANIZATION\nTERTIARY AND RESEARCH\nMISSION HOSPITAL\nPRIVATE HOSPITAL\nNETWORKS"
   },
   {
    "fieldname": "cso_geoscheme",
