@@ -33,13 +33,13 @@ def get_context(context):
 		raise frappe.Redirect
 
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def init_load():
 	posts=frappe.db.get_all('Organisation',fields=['Name', 'Background', 'Acronym', 'logo'],  as_list=True, limit=9)
 	return posts
 
 		
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def get_posts(number):
 	length=int(number)+9
 	posts=frappe.db.get_all('Organisation',fields=['Name', 'Background', 'Acronym', 'logo'],  as_list=True, start=number, page_length=length)	
