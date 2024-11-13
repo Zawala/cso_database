@@ -21,14 +21,16 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-26 17:02:03.611165",
+ "modified": "2024-11-13 06:23:35.338361",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "program",

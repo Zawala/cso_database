@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>{{org.name}}</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+{%- block head_include %}
+{{ head_include or "" }}
+{% endblock -%}
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet"> -->
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header py-3">
+    
+  </header>
+
+  <!-- <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+
+      <a class="p-2 link-secondary" href="#">Health</a>
+      <a class="p-2 link-secondary" href="#">Style</a>
+      <a class="p-2 link-secondary" href="#">Travel</a>
+    </nav>
+  </div> -->
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">{{org.name}}</h1>
+      <p class="lead my-3" style="color: white;">{{org.aim_core_business}}</p>
+      <p class="lead mb-0">{{org.acronym}}</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Mission</strong>
+          <p class="card-text mb-auto">{{org.mission}}</p>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Vision</strong>
+          <p class="mb-auto">{{org.vision}}</p>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        From the Firehose
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title">Organisation Details</h2>
+        <p class="blog-post-meta">
+          {%- if org.year_of_establishment %}
+          Registered on {{org.year_of_establishment}}
+          {%- endif -%}
+
+        <p>
+         The {{org.status}} organisation which operates on a {{org.cso_geoscheme}} geoscheme
+          can be contacted on {{org.phone_number}} or {{org.email_address}}.
+          </p>
+        <hr>
+        <h2>Memberships</h2>
+        <blockquote class="blockquote">
+          <p>Memberships the organisation holds:</p>
+        </blockquote>
+        <!-- <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p> -->
+        <ul>
+          {% for membership in org.table_zpwh %}
+          <li>{{membership.memberships}}</li>
+            {% endfor %}
+          
+        </ul>      
+        <hr>
+        <h2>Focus Areas</h2>
+        <blockquote class="blockquote">
+          <p>Thematic areas the organisation works in:</p>
+        </blockquote>
+        <!-- <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p> -->
+        <ul>
+          {% for focus in org.table_lozm %}
+          <li>{{focus.thermatic_area}}</li>
+            {% endfor %}
+          
+        </ul>     
+       </article>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title"> Programs Running </h2>
+
+        <blockquote>
+          <p>Currently running programs</p>
+        </blockquote>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Program Running</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for program in org.programs_running %}
+            <tr>
+              <td>{{program.program_currently_running}}</td>
+              <td>{{program.description}}</td>
+            </tr>
+            
+            {% endfor %}
+          </tbody>
+         
+        </table>
+
+      </article>
+
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">Background</h4>
+          <p class="mb-0">{{org.background}}</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Director Details</h4>
+          <ol class="list-unstyled mb-0">
+            {% for director in org.table_aikq %}
+            <a href="tel:{{director.phone_number}}">{{director.name1}}</a>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Contact Persons</h4>
+          <ol class="list-unstyled mb-0">
+            {% for contact in org.table_nnex %}
+            <a href="tel:{{contact.phone_number}}">{{contact.name1}}</a>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Addresses</h4>
+          <ol class="list-group">
+            {% for location in org.location %}
+            <li class="list-group-item list-group-item-action">
+              <a href="{{location.gps}}"class="link-offset-2 link-underline link-underline-opacity-0">
+                {{location.physical_address}}, {{location.province}}
+              </a>
+            </li>
+            {% endfor %}
+           
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+
+
+    
+  </body>
+</html>
