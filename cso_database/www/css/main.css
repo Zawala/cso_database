@@ -822,10 +822,10 @@ button {
   -ms-flex-pack: center;
       justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../images/Searchs_130.png");
-  background-position: bottom right;
+  background: url("../images/vecteezy_multicultural-and-multiethnic-people-community-integration-concept_.jpg");
+  background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding: 15px;
 }
 

@@ -43,7 +43,10 @@ frappe.ready(function() {
 
     });
 
-
+    $( "#search" ).click(function (event) {
+        event.preventDefault();
+    
+    });
 
     $( "#load" ).click(function (event) {
         event.preventDefault();
