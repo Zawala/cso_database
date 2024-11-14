@@ -107,6 +107,13 @@
          The {{org.status}} organisation which operates on a {{org.cso_geoscheme}} geoscheme
           can be contacted on {{org.phone_number}} or {{org.email_address}}.
           </p>
+
+          <ul>
+            <li>Registration Type: {{org.registration_type}}</li>
+            <li>Registration Number: {{org.number}}</li>
+            <li>Sector Type: {{org.sector_type}}</li>
+            
+          </ul>   
         <hr>
         <h2>Memberships</h2>
         <blockquote class="blockquote">
@@ -201,6 +208,21 @@
            
           </ol>
         </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Social Links</h4>
+          <ol class="list-group">
+            {% for link in org.social_media_handles %}
+            <li class="list-group-item list-group-item-action">
+              <a href="{{link.url}}"class="link-offset-2 link-underline link-underline-opacity-0">
+                {{link.url}}
+              </a>
+            </li>
+            {% endfor %}
+           
+          </ol>
+        </div>
+
       </div>
     </div>
   </div>
