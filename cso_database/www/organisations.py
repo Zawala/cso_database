@@ -47,7 +47,7 @@ def init_load(search=None):
 def get_posts(number,search):
 	length=int(number)+9
 	posts=frappe.db.get_all('Organisation',
-						filters={"name": ["like", "%{0}%".format(search)]},
+						filters={"organizational_name": ["like", "%{0}%".format(search)]},
 						 fields=['Name', 'Background', 'Acronym', 'logo'],
 						     as_list=True,
 							   start=number,
@@ -61,7 +61,7 @@ def custom_search(number=0,search=None, thematic_area=None, registration_type=No
 	
 	length=int(number)+9
 	posts=frappe.db.get_all('Organisation',
-						or_filters={"name": ["like", "%{0}%".format(search)],
+						or_filters={"organizational_name": ["like", "%{0}%".format(search)],
 								 "thematic_areas": ["like", "%{0}%".format(thematic_area)],
 								 "provinces": ["like", "%{0}%".format(province)],
 								 "registration_type": ["like", "%{0}%".format(registration_type)]},
