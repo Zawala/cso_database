@@ -4,13 +4,16 @@
 {%- block navbar -%}
 		
 {%- endblock -%}
+{% block script %}
+<script>{% include "www/js/organisations.js" %}</script>
+{% endblock %}
+
 {% block page_content %}
 
     
 
     
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -92,8 +95,10 @@
     <nav class="navbar navbar-light  justify-content-between">
       <a class="navbar-brand">Home</a>
       <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" value='{{query}}' placeholder="Name" aria-label="Search">
         <select id="registration-type" class="form-control mr-sm-2">
           <option selected disabled>Select Reg Type</option>
+          <option></option>
           <option>PVO</option>
           <option>Trust</option>
           <option>Cooperative</option>
@@ -101,6 +106,7 @@
         </select>
         <select id="province" class="form-control mr-sm-2">
           <option selected disabled>Select Province</option>
+          <option></option>
           <option>Harare</option>
           <option>Bulawayo</option>
           <option>Manicaland</option>
@@ -114,6 +120,7 @@
         </select>
         <select id="thematic" class="form-control mr-sm-2">
           <option selected disabled>Thematic <Area></Area></option>
+          <option></option>
           <option>HIV</option>
           <option>MALARIA</option>
           <option>TB</option>
@@ -175,7 +182,7 @@
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
-      <div class="row capsule row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row capsule row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="capsule_card">
 
 
      
@@ -196,7 +203,6 @@
     <p class="mb-1">Zimcsodatabase &copy; {{year}}</p>
   </div>
 </footer>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 {% endblock %}

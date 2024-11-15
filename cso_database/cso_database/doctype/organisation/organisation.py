@@ -6,4 +6,14 @@ from frappe.model.document import Document
 
 
 class Organisation(Document):
-	pass
+	def before_save(self):
+		provinces=[]
+		for location in self.location:
+			provinces.append(location.province)
+		self.provinces=str(provinces)
+
+
+		thematic_areas=[]
+		for thematic in self.table_lozm:
+			thematic_areas.append(thematic.thermatic_area)
+		self.thematic_areas=str(thematic_areas)

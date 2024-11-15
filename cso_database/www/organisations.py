@@ -34,13 +34,44 @@ def get_context(context):
 
 
 @frappe.whitelist(allow_guest=True)
-def init_load():
-	posts=frappe.db.get_all('Organisation',fields=['Name', 'Background', 'Acronym', 'logo'],  as_list=True, limit=9)
+def init_load(search=None):
+	print(search)
+	posts=frappe.db.get_all('Organisation',
+						 filters={"name": ["like", "%{0}%".format(search)]},
+						 fields=['Name', 'Background', 'Acronym', 'logo'],
+						     as_list=True, limit=9)
 	return posts
 
 		
 @frappe.whitelist(allow_guest=True)
-def get_posts(number):
+def get_posts(number,search):
 	length=int(number)+9
-	posts=frappe.db.get_all('Organisation',fields=['Name', 'Background', 'Acronym', 'logo'],  as_list=True, start=number, page_length=length)	
+	posts=frappe.db.get_all('Organisation',
+						filters={"name": ["like", "%{0}%".format(search)]},
+						 fields=['Name', 'Background', 'Acronym', 'logo'],
+						     as_list=True,
+							   start=number,
+								 page_length=length)	
+	return posts
+
+
+
+@frappe.whitelist(allow_guest=True)
+def custom_search(number=0,search=None, thematic_area=None, registration_type=None, province=None):
+	accounts = frappe.db.get_list('Organisation', pluck='name')
+	for account in accounts:
+		doc=frappe.get_doc('Organisation',account)
+		doc.save(ignore_permissions=True)
+	length=int(number)+9
+	posts=frappe.db.get_all('Organisation',
+						filters={"name": ["like", "%{0}%".format(search)],
+								"thematic_areas": ["like", "%{0}%".format(thematic_area)],
+								"provinces": ["like", "%{0}%".format(province)],
+								 "registration_type": ["like", "%{0}%".format(registration_type)]},
+						 fields=['Name', 'Background', 'Acronym', 'logo'],
+						     as_list=True,
+							   start=number,
+								 page_length=length)	
+	
+	print(posts)
 	return posts

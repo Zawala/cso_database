@@ -31,6 +31,7 @@
   "social_media_handles",
   "location_section",
   "location",
+  "provinces",
   "contact_person_section",
   "table_nnex",
   "about_information_section",
@@ -45,6 +46,7 @@
   "focus_area_section",
   "table_lozm",
   "programs_running",
+  "thematic_areas",
   "membership_section",
   "table_zpwh",
   "role_and_funding_section",
@@ -289,11 +291,28 @@
    "fieldname": "logo",
    "fieldtype": "Attach Image",
    "label": "Logo"
+  },
+  {
+   "fieldname": "provinces",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "provinces",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "thematic_areas",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "in_filter": 1,
+   "label": "thematic_areas",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-04 05:54:53.950107",
+ "modified": "2024-11-15 07:22:42.567281",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",

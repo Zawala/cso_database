@@ -17,13 +17,13 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Memberships",
-   "options": "NAC\nZAN\nNANGO\nCCM\nGFF\nNASCOH\nCRC\nMoPSLW\nWCOZ\nDAAC\nPAAC\nMCWC\nSWRGN\nZIMCODD\nSADC HEALTH PROTOCOL\nAFRICA UNION\nINTERNATIONAL HEALTH NETWORKS\nZNNP+"
+   "options": "NAC\nZAN\nNANGO\nDAC\nCCM\nGFF\nNASCOH\nCRC\nMoPSLW\nWCOZ\nDAAC\nPAAC\nMCWC\nSWRGN\nZIMCODD\nSADC HEALTH PROTOCOL\nAFRICA UNION\nINTERNATIONAL HEALTH NETWORKS\nZNNP+"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-26 17:02:38.179541",
+ "modified": "2024-11-15 07:17:23.212477",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Membership",

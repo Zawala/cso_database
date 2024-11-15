@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Zy0YMhbRA7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Cso Database</span>\",\"col\":12}},{\"id\":\"xw8mFhoqt_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Organisation\",\"col\":3}},{\"id\":\"552TWz_9dH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"l7w--juK8n\",\"type\":\"card\",\"data\":{\"card_name\":\"Database\",\"col\":4}}]",
+ "content": "[{\"id\":\"Zy0YMhbRA7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Cso Database</span>\",\"col\":12}},{\"id\":\"xw8mFhoqt_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Organisation\",\"col\":3}},{\"id\":\"552TWz_9dH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"l7w--juK8n\",\"type\":\"card\",\"data\":{\"card_name\":\"Database\",\"col\":4}},{\"id\":\"mOf9Iafk_c\",\"type\":\"card\",\"data\":{\"card_name\":\"Data Capture\",\"col\":4}}]",
  "creation": "2024-08-29 09:11:28.226708",
  "custom_blocks": [],
  "docstatus": 0,
@@ -41,9 +41,28 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Capture",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Forms",
+   "link_count": 0,
+   "link_to": "Web Form",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-08-29 09:32:52.125881",
+ "modified": "2024-11-15 06:38:08.037294",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Cso Database",
