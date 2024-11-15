@@ -60,7 +60,6 @@ def get_posts(number,search):
 def custom_search(number=0,search=None, thematic_area=None, registration_type=None, province=None):
 	
 	length=int(number)+9
-	print("%{0}%".format(thematic_area))
 	posts=frappe.db.get_all('Organisation',
 						or_filters={"name": ["like", "%{0}%".format(search)],
 								 "thematic_areas": ["like", "%{0}%".format(thematic_area)],
@@ -71,5 +70,4 @@ def custom_search(number=0,search=None, thematic_area=None, registration_type=No
 							   start=number,
 								 page_length=length)	
 	
-	print(posts)
 	return posts
