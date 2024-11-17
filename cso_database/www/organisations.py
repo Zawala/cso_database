@@ -24,13 +24,7 @@ def get_context(context):
 			context[key] = frappe.form_dict[key]
 
 		context.year=datetime.datetime.now().year
-	else:
-		frappe.redirect_to_message(
-			_("Some information is missing"),
-			_("Looks like someone sent you to an incomplete URL. Please ask them to look into it."),
-		)
-		frappe.local.flags.redirect_location = frappe.local.response.location
-		raise frappe.Redirect
+	
 
 
 @frappe.whitelist(allow_guest=True)
@@ -58,14 +52,18 @@ def get_posts(number,search):
 
 @frappe.whitelist(allow_guest=True)
 def custom_search(number=0,search=None, thematic_area=None, registration_type=None, province=None):
-	
+	print(search)
 	length=int(number)+9
 	posts=frappe.db.get_all('Organisation',
-						or_filters={"organizational_name": ["like", "%{0}%".format(search)],
+						or_filters={
 								 "thematic_areas": ["like", "%{0}%".format(thematic_area)],
 								 "provinces": ["like", "%{0}%".format(province)],
-								 "registration_type": ["like", "%{0}%".format(registration_type)]},
-						 fields=['Name', 'Background', 'Acronym', 'logo'],
+								 "registration_type": ["like", "%{0}%".format(registration_type)]
+								 },
+						filters={
+							"organizational_name": ["like", "%{0}%".format(search)],
+			  					},	
+						 fields=['Name', 'aim_core_business', 'Acronym', 'logo'],
 						     as_list=True,
 							   start=number,
 								 page_length=length)	

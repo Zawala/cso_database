@@ -1,61 +1,180 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <script>
-      window.frappe = {};
-      frappe.ready_events = [];
-      frappe.ready = function(fn) {
-        frappe.ready_events.push(fn);
-      }
-      window.dev_server = {{ dev_server }};
-      window.socketio_port = {{ (frappe.socketio_port or 9000) }};
-      window.show_language_picker = {{ show_language_picker or 'false' }};
-    </script>
-  </head>
-  <body>
-    <div class="s130">
-      <form>
-        <span class="info" style="margin-left: 50px;"><strong>Organisation: Name, District, Province or Thematic Area</strong> </span>
-        <div class="inner-form" >
-          <div class="input-field first-wrap">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-              </svg>
-            </div>
-            <input id="search" type="text" placeholder="What are you looking for?" />
-          </div>
-          <div class="input-field second-wrap">
-            <button class="btn-search" id="search_btn" type="button">SEARCH</button>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Zimcsodatabase</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	<link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+  	<div class="header container">
+      <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
+        <a rel="home" href="landing.html">
+          <img src="images/logo.png" width="200" alt="logo">
+        </a>
+      </div>
+  	</div>
+		<div class="navbar" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="selected"><a href="landing.html">Home</a></li>
+          <li class= "hidden-xs hidden-sm">
+            <a rel="home" href="landing.html"><img class="logo" src="images/logo.png" width="200" alt="logo"></a>
+          </li>
+          <li ><a href="organisations?query=">organisations</a></li>
+          <li><a href="contact_us.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <img src="images/slide3.jpg" alt="">
+		      <div class="carousel-caption">
+		        Look for an organisation
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="images/slide2.jpg" alt="">
+		      <div class="carousel-caption">
+		        Contact organisation
+		      </div>
+		    </div>
+		    <div class="item">
+		      <img src="images/slide1.jpg" alt="">
+		      <div class="carousel-caption">
+		        Connect
+		      </div>
+		    </div>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control center-icon" href="#carousel-example-generic" role="button" data-slide="prev">
+			<i class="fa fa-5x fa-chevron-left" aria-hidden="true"></i>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control center-icon" href="#carousel-example-generic" role="button" data-slide="next">
+			<i class="fa fa-5x fa-chevron-right" aria-hidden="true"></i>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+    <div class="container header-start text-center">
+        <div class="heading-icon">
+          <i class="fa fa-3x fa-search-plus"></i>
         </div>
-       
-      </form>
+      <h1 class="main-text">Zimbabwe civil society organization Database</h1>
+	  <p class="text-center sub-text"><em class="first-line">Designed by Zimbabwe AIDS Network (ZAN), an organization that is mandated to coordinate Civil Society Organizations (CSOs) response to HIV, TB, SRHR and NCDs in Zimbabwe.</em></p>
+      <p class="text-center sub-text"><em class="first-line">Easy access to information about civil society organizations, their activities and impact, raising awareness and fostering engagements in civic issues.</em></p>
     </div>
-    <script src="js/extention/choices.js"></script>
-    {% block base_scripts %}
-	<!-- js should be loaded in body! -->
-	<script>
-		frappe.boot = {{ boot }}
-		// for backward compatibility of some libs
-		frappe.sys_defaults = frappe.boot.sysdefaults;
-	</script>
-	{{ include_script('frappe-web.bundle.js') }}
-	{% endblock %}
 
-	{%- for link in web_include_js %}
-	{{ include_script(link) }}
-	{%- endfor -%}
 
-	{%- block script %}
-		{% if colocated_js -%}
-			<script>{{ colocated_js }}</script>
-		{%- endif %}
-	{%- endblock %}
-  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+	<div class="divider col-sm-12 col-xs-12 col-md-12">
+		<div class="header-text"><span>Stakeholders</span></div>
+	</div>
+   
+	<div class="container">
+		<div class="col-md-4">
+		  <div class="service-features">
+		  <div class="img-container">
+			<i class="fa fa-money" aria-hidden="true"></i>
+		  </div>
+			<h3>DONERS</h3>
+			<p> The ability to search filter organizations by region, sector and other criteria to identify the most suitable organisation for their philanthropicgoals.</p>
+		  </div>
+		</div><!-- END ONE THIRD COLUMN -->
+
+		<div class="col-md-4">
+		  <div class="service-features service-features2">
+		  <div class="img-container">
+			<i class="fa fa-globe" aria-hidden="true"></i>
+		  </div>
+
+			<h3>GOVERNMENT</h3>
+			<p>Provide insights into the civic landscape, helping them to develop effective policies and programs to address social issues.</p>
+		  </div>
+
+		</div><!-- END ONE THIRD COLUMNS -->
+
+		<div class="col-md-4">
+		  <div class="service-features">
+		  <div class="img-container">
+			<i class="fa fa-sitemap" aria-hidden="true"></i>
+		  </div>
+			<h3>Cso's</h3>
+			<p> A platform to showcase their work and accomplishments, attract funding and connect with other organizations for collaboration and learning.</p>
+		  </div>
+
+		</div><!-- END ONE THIRD COLUMNS -->
+
+
+		<div class="col-md-4">
+			<div class="service-features">
+			<div class="img-container">
+				<i class="fa fa-users" aria-hidden="true"></i>
+			</div>
+			  <h3>GENERAL PUBLIC</h3>
+			  <p>Easy access to information about civil society organizations, their activities and impact, raising awareness and fostering engagements in civic issues.</p>
+			</div>
+  
+		  </div><!-- END ONE FORTH COLUMNS -->
+
+
+
+	</div><!-- END ROW -->
+
+			
+     <!-- ============FOOTER============= -->
+     <footer class="text-body-secondary py-5">
+      <div class="container">
+        <p class="mb-1">Zimcsodatabase &copy; {{year}}</p>
+      </div>
+    </footer>
+<!-- script references -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <script src="js/nav-hover.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Place in the <head>, after the three links -->
+    <script>
+     $('.testimonials-slider').bxSlider({
+      slideWidth: 800,
+      minSlides: 1,
+      maxSlides: 1,
+      slideMargin: 32,
+      auto: true,
+      autoControls: true
+      });
+    </script>
+		<script type="text/javascript">
+		</script>
+	</body>
 </html>
