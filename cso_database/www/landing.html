@@ -1,186 +1,404 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Zimcsodatabase</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Zimcsodatabase</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
 
-	<link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="css/testimonial.css" />
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-  	<div class="header container">
-      <div class="visible-xs visible-sm col-xs-12 col-sm-12 text-center sm-logo">
-        <a rel="home" href="landing.html">
-          <img src="images/logo.png" width="200" alt="logo">
-        </a>
-      </div>
-  	</div>
-		<div class="navbar" role="navigation">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="selected"><a href="landing.html">Home</a></li>
-          <li class= "hidden-xs hidden-sm">
-            <a rel="home" href="landing.html"><img class="logo" src="images/logo.png" width="200" alt="logo"></a>
-          </li>
-          <li ><a href="organisations?query=">organisations</a></li>
-          <li><a href="contact_us.html">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		  </ol>
-
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner" role="listbox">
-		    <div class="item active">
-		      <img src="images/slide3.jpg" alt="" style="display: block;
-			  margin-left: auto;
-			  margin-right: auto;">
-		      <div class="carousel-caption">
-		        Look for an organisation
-		      </div>
-		    </div>
-		    <div class="item">
-		      <img src="images/slide2.jpg" alt="" style="display: block;
-			  margin-left: auto;
-			  margin-right: auto;">
-		      <div class="carousel-caption">
-		        Contact organisation
-		      </div>
-		    </div>
-		    <div class="item">
-		      <img src="images/slide1.jpg" alt="" style="display: block;
-			  margin-left: auto;
-			  margin-right: auto;">
-		      <div class="carousel-caption">
-		        Connect
-		      </div>
-		    </div>
-		  </div>
-
-		  <!-- Controls -->
-		  <a class="left carousel-control center-icon" href="#carousel-example-generic" role="button" data-slide="prev">
-			<i class="fa fa-5x fa-chevron-left" aria-hidden="true"></i>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control center-icon" href="#carousel-example-generic" role="button" data-slide="next">
-			<i class="fa fa-5x fa-chevron-right" aria-hidden="true"></i>
-			<span class="sr-only">Next</span>
-		  </a>
-		</div>
-    <div class="container header-start text-center">
-        <div class="heading-icon">
-          <i class="fa fa-3x fa-search-plus"></i>
+	<!-- CSS here -->
+	<link rel="stylesheet" href="charity/css/bootstrap.min.css">
+	<link rel="stylesheet" href="charity/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="charity/css/slicknav.css">
+    <link rel="stylesheet" href="charity/css/flaticon.css">
+    <link rel="stylesheet" href="charity/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="charity/css/gijgo.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="charity/css/animate.min.css">
+    <link rel="stylesheet" href="charity/css/animated-headline.css">
+	<link rel="stylesheet" href="charity/css/magnific-popup.css">
+	<link rel="stylesheet" href="charity/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="charity/css/themify-icons.css">
+	<link rel="stylesheet" href="charity/css/slick.css">
+	<link rel="stylesheet" href="charity/css/nice-select.css">
+	<link rel="stylesheet" href="charity/css/style.css">
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="charity/img/logo/loder.png" alt="">
+                </div>
+            </div>
         </div>
-      <h1 class="main-text">Zimbabwe civil society organization Database</h1>
-	  <p class="text-center sub-text"><em class="first-line">Designed by Zimbabwe AIDS Network (ZAN), an organization that is mandated to coordinate Civil Society Organizations (CSOs) response to HIV, TB, SRHR and NCDs in Zimbabwe.</em></p>
-      <p class="text-center sub-text"><em class="first-line">Easy access to information about civil society organizations, their activities and impact, raising awareness and fostering engagements in civic issues.</em></p>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top d-none d-lg-block">
+                    <div class="container-fluid">
+                        <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left d-flex">
+                                    <ul>     
+                                        <li>Phone: 0242570604</li>
+                                        <li>Email: zimaidsnetworkdirector@gmail.com</li>
+                                    </ul>
+                                   
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="imahgges/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="/organisations">CSOs in Zimbabwe</a></li>
+                                                <li><a href="guide.html">User Guide</a></li>
+                                                <li><a href="community.html">Community</a></li>
+                                                <li><a href="/contact.html">Contact Us</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- Header-btn -->
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <!-- header end -->
+    <main>
+    <!-- slider Area Start-->
+    <div class="slider-area">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Zimbabwe civil society organization Database<br> </h1>
+                                <P data-animation="fadeInUp" data-delay=".8s" >Designed by Zimbabwe AIDS Network (ZAN), an organization that is mandated to coordinate Civil Society Organizations (CSOs) response to HIV, TB, SRHR and NCDs in Zimbabwe.</P>
+                                <!-- Hero-btn -->
+                                <div class="hero__btn">
+                                    <a href="mailto:zimaidsnetworkdirector@gmail.com " class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <a href="#" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
+                                        <i class="flaticon-null"></i>
+                                        <p>0242570604</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- slider Area End-->
+    <!--? Services Area Start -->
+    <div class="service-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <h2></h2><span>Stakeholders</span></h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="img-container">
+                            <i class="fa fa-dollar" aria-hidden="true"></i>
+                          </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">DONERS</a></h5>
+                            <p>The ability to search filter organizations by region, sector and other criteria to identify the most suitable organisation for their philanthropicgoals. We spend timetting to know your processes to.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="img-container">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                          </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">GOVERNMENT</a></h5>
+                            <p>Provide insights into the civic landscape, helping them to develop effective policies and programs to address social issues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                       
+                        <div class="img-container">
+                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Cso's</a></h5>
+                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="img-container">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">GENERAL PUBLIC</a></h5>
+                            <p>Easy access to information about civil society organizations, their activities and impact, raising awareness and fostering engagements in civic issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Area End -->
+    <!--? About Law Start-->
+    <section class="about-low-area section-padding2">
+        
+        
+
+    </section>
+    <!-- About Law End-->
+    <!-- Our Cases Start -->
+    <div class="our-cases-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>Our Cases you can see</span>
+                        <h2>Explore our latest causes that we works </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="charity/img/gallery/case1.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Ensure Education For Every Poor Children</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar1" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="70"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $20,000</span></p>
+                                <p>Goal:<span> $35,000</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="charity/img/gallery/case2.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Providing Healthy Food For The Children</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar2" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="25"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $20,000</span></p>
+                                <p>Goal:<span> $35,000</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="charity/img/gallery/case3.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Supply Drinking Water For  The People</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar3" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="50"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $20,000</span></p>
+                                <p>Goal:<span> $35,000</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Cases End -->
+   
+
+    
+    </main>
+    <footer>
+        <div class="footer-wrapper section-bg2" data-background="charity/img/gallery/footer_bg.png">
+            <!-- Footer Top-->
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-tittle">
+                                    <div class="footer-logo mb-20">
+                                        <a href="index.html"><img src="charity/img/logo/logo2_footer.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p>Address: 30 St Patrick’s Road, Hatfield Harare</p>
+                                        </li>
+                                        <li><a href="#">Phone: 0242570604</a></li>
+                                        <li><a href="#">Email: <a href="mailto:zimaidsnetworkdirector@gmail.com ">zimaidsnetworkdirector@gmail.com </a></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-9 ">
+                                <div class="footer-copy-right">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Zimcsodatabase <i class="fa fa-heart" aria-hidden="true"></i> 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
+    <!-- JS here -->
 
-	<div class="divider col-sm-12 col-xs-12 col-md-12">
-		<div class="header-text"><span>Stakeholders</span></div>
-	</div>
-   
-	<div class="container">
-		<div class="col-md-4">
-		  <div class="service-features">
-		  <div class="img-container">
-			<i class="fa fa-money" aria-hidden="true"></i>
-		  </div>
-			<h3>DONERS</h3>
-			<p> The ability to search filter organizations by region, sector and other criteria to identify the most suitable organisation for their philanthropicgoals.</p>
-		  </div>
-		</div><!-- END ONE THIRD COLUMN -->
+    <script src="./charity/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./charity/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./charity/js/popper.min.js"></script>
+    <script src="./charity/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./charity/js/jquery.slicknav.min.js"></script>
 
-		<div class="col-md-4">
-		  <div class="service-features service-features2">
-		  <div class="img-container">
-			<i class="fa fa-globe" aria-hidden="true"></i>
-		  </div>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./charity/js/owl.carousel.min.js"></script>
+    <script src="./charity/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./charity/js/wow.min.js"></script>
+    <script src="./charity/js/animated.headline.js"></script>
+    <script src="./charity/js/jquery.magnific-popup.js"></script>
 
-			<h3>GOVERNMENT</h3>
-			<p>Provide insights into the civic landscape, helping them to develop effective policies and programs to address social issues.</p>
-		  </div>
+    <!-- Date Picker -->
+    <script src="./charity/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./charity/js/jquery.nice-select.min.js"></script>
+    <script src="./charity/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="./charity/js/jquery.barfiller.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./charity/js/jquery.counterup.min.js"></script>
+    <script src="./charity/js/waypoints.min.js"></script>
+    <script src="./charity/js/jquery.countdown.min.js"></script>
+    <script src="./charity/js/hover-direction-snake.min.js"></script>
 
-		</div><!-- END ONE THIRD COLUMNS -->
-
-		<div class="col-md-4">
-		  <div class="service-features">
-		  <div class="img-container">
-			<i class="fa fa-sitemap" aria-hidden="true"></i>
-		  </div>
-			<h3>Cso's</h3>
-			<p> A platform to showcase their work and accomplishments, attract funding and connect with other organizations for collaboration and learning.</p>
-		  </div>
-
-		</div><!-- END ONE THIRD COLUMNS -->
-
-
-		<div class="col-md-4">
-			<div class="service-features">
-			<div class="img-container">
-				<i class="fa fa-users" aria-hidden="true"></i>
-			</div>
-			  <h3>GENERAL PUBLIC</h3>
-			  <p>Easy access to information about civil society organizations, their activities and impact, raising awareness and fostering engagements in civic issues.</p>
-			</div>
-  
-		  </div><!-- END ONE FORTH COLUMNS -->
-
-
-
-	</div><!-- END ROW -->
-
-			
-     <!-- ============FOOTER============= -->
-     <footer class="text-body-secondary py-5">
-      <div class="container">
-        <p class="mb-1">Zimcsodatabase &copy; {{year}}</p>
-      </div>
-    </footer>
-<!-- script references -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-    <script src="js/nav-hover.min.js"></script>
-    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!-- Place in the <head>, after the three links -->
-    <script>
-     $('.testimonials-slider').bxSlider({
-      slideWidth: 800,
-      minSlides: 1,
-      maxSlides: 1,
-      slideMargin: 32,
-      auto: true,
-      autoControls: true
-      });
-    </script>
-		<script type="text/javascript">
-		</script>
-	</body>
+    <!-- contact js -->
+    <script src="./charity/js/contact.js"></script>
+    <script src="./charity/js/jquery.form.js"></script>
+    <script src="./charity/js/jquery.validate.min.js"></script>
+    <script src="./charity/js/mail-script.js"></script>
+    <script src="./charity/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./charity/js/plugins.js"></script>
+    <script src="./charity/js/main.js"></script>
+    
+    </body>
 </html>

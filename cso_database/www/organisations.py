@@ -17,6 +17,7 @@ expected_keys = (
 
 def get_context(context):
 	context.no_cache = 1
+	context.csfr_token=frappe.sessions.get_csrf_token()
 
 	# # all these keys exist in form_dict
 	if not (set(expected_keys) - set(list(frappe.form_dict))):

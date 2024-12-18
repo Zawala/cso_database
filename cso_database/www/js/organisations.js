@@ -1,5 +1,5 @@
-frappe.ready(function() {
 
+frappe.ready(function() {
 
     const capsuleCard = document.getElementById('capsule_card');
     const childCount = capsuleCard.children.length;
@@ -8,55 +8,63 @@ frappe.ready(function() {
 
     // Initialize allChildren with the correct value
     const allChildren = capsuleCard.children.length;
-    frappe.call({
-        method: "cso_database.www.organisations.custom_search",
-                args: {
-                            number:allChildren,
-                            search: $("#search_field").val(),
-                            thematic_area:$("#thematic").val(),
-                            registration_type:$("#registration-type").val(),
-                            provice:$("#province").val(),
-
-
-                },
-        callback: function(r){
-        posts = r.message;
-        const row = document.querySelector('.capsule'); 
-        posts.forEach(post => {
-
-            const col = document.createElement('div');
-            col.className = 'col';
-          
-            const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
-
-            // Update the innerHTML with the conditional thumbnail
-            col.innerHTML = `
-                    <div class="col-md-3 col-sm-6 wow animated-longer-delay-2 fadeInDown ">
-                    <div class="panel">
-                        <div class="panel-body">
-                        <div class="col-xs-12">
-                            <div class="avatar-team-member effects-container effects-enlarge">
-                                <a href="#">
-                                <img src="${thumbnailSrc}" alt="image">
-                                </a>
-                            </div>
-                        </div>
-                                <h3>${post[0].substring(0, 30)}</h3>
-                                <div class="text-center">
-                                <ul class="list-unstyled list-inline list-social-sq-primary">
-                                    <li><a href='/organisation?name=${post[0]}'><i class="fa fa-compass"></i>View</a></li>
-                                
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                    </div>`;
+    $.ajax({
+        url: "/api/method/cso_database.www.organisations.custom_search",
+        type: "POST",
+        data: {
+            number: allChildren,
+            search: $("#search_field").val(),
+            thematic_area: $("#thematic").val(),
+            registration_type: $("#registration-type").val(),
+            provice: $("#province").val()
+        },
+        headers: {
+            'X-Frappe-CSRF-Token': '{{ csfr_token }}'
+        },
+        success: function(r) {
+            posts = r.message;
             
-                row.appendChild(col);
-          
-          });
-    }
-        });
+            console.log(posts);
+            posts.forEach(post => {
+                const col = document.createElement('div');
+                col.className = 'col-lg-4 col-md-6 col-sm-6';
+                
+                const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
+                const aim = post[1] ? `${post[1]}` : "None";
+                col.innerHTML = `
+                     
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="${thumbnailSrc}" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="/organisation?name=${post[0]}">${post[0].substring(0, 30)}</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar1" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="70"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>${aim.substring(0, 160)}</p>
+                            </div>
+                        </div>
+                    </div>
+               `;
+                
+                    capsuleCard.appendChild(col);
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error("Error:", error);
+        }
+    });
 
     });
 
@@ -72,56 +80,63 @@ frappe.ready(function() {
     
         // Initialize allChildren with the correct value
         const allChildren = capsuleCard.children.length;
-        frappe.call({
-            method: "cso_database.www.organisations.custom_search",
-                args: {
-                            number:allChildren,
-                            search: $("#search_field").val(),
-                            thematic_area:$("#thematic").val(),
-                            registration_type:$("#registration-type").val(),
-                            provice:$("#province").val(),
-
-
-                },
-            callback: function(r){
-            posts = r.message;
-            const row = document.querySelector('.capsule'); 
-    
-            posts.forEach(post => {
-
-                const col = document.createElement('div');
-                col.className = 'col';
-              
-                const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
-    
-            // Update the innerHTML with the conditional thumbnail
-            col.innerHTML = `
-            <div class="col-md-3 col-sm-6 wow animated-longer-delay-2 fadeInDown ">
-            <div class="panel">
-                <div class="panel-body">
-                <div class="col-xs-12">
-                    <div class="avatar-team-member effects-container effects-enlarge">
-                        <a href="#">
-                        <img src="${thumbnailSrc}" alt="image">
-                        </a>
-                    </div>
-                </div>
-                        <h3>${post[0].substring(0, 30)}</h3>
-                        <div class="text-center">
-                        <ul class="list-unstyled list-inline list-social-sq-primary">
-                            <li><a href='/organisation?name=${post[0]}'><i class="fa fa-compass"></i>View</a></li>
-                        
-                        </ul>
-                    </div>
-                    </div>
-                </div>
-            </div>`;
-              
-                row.appendChild(col);
-              
-              });
-        }
-            });
+        $.ajax({
+            url: "/api/method/cso_database.www.organisations.custom_search",
+            type: "POST",
+            data: {
+                number: allChildren,
+                search: $("#search_field").val(),
+                thematic_area: $("#thematic").val(),
+                registration_type: $("#registration-type").val(),
+                provice: $("#province").val()
+            },
+            headers: {
+                'X-Frappe-CSRF-Token': '{{ csfr_token }}'
+            },
+            success: function(r) {
+                posts = r.message;
+                
+                console.log(posts);
+                posts.forEach(post => {
+                    const col = document.createElement('div');
+                    col.className = 'col-lg-4 col-md-6 col-sm-6';
+                    
+                    const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
+                    const aim = post[1] ? `${post[1]}` : "None";
+                    col.innerHTML = `
+                         
+                        <div class="single-cases mb-40">
+                            <div class="cases-img">
+                                <img src="${thumbnailSrc}" alt="">
+                            </div>
+                            <div class="cases-caption">
+                                <h3><a href="/organisation?name=${post[0]}">${post[0].substring(0, 30)}</a></h3>
+                                <!-- Progress Bar -->
+                                <div class="single-skill mb-15">
+                                    <div class="bar-progress">
+                                        <div id="bar1" class="barfiller">
+                                            <div class="tipWrap">
+                                                <span class="tip"></span>
+                                            </div>
+                                            <span class="fill" data-percentage="70"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- / progress -->
+                                <div class="prices d-flex justify-content-between">
+                                    <p>${aim.substring(0, 160)}</p>
+                                </div>
+                            </div>
+                        </div>
+                   `;
+                    
+                        capsuleCard.appendChild(col);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
     
         });
 
@@ -138,53 +153,62 @@ frappe.ready(function() {
             const allChildren = capsuleCard.children.length;
             console.log(allChildren);
           
-            frappe.call({
-                method: "cso_database.www.organisations.custom_search",
-                args: {
-                            number:allChildren,
-                            search: $("#search_field").val(),
-                            thematic_area:$("#thematic").val(),
-                            registration_type:$("#registration-type").val(),
-                            provice:$("#province").val(),
-
-
+            $.ajax({
+                url: "/api/method/cso_database.www.organisations.custom_search",
+                type: "POST",
+                data: {
+                    number: allChildren,
+                    search: $("#search_field").val(),
+                    thematic_area: $("#thematic").val(),
+                    registration_type: $("#registration-type").val(),
+                    provice: $("#province").val()
                 },
-                callback: function(r){
+                headers: {
+                    'X-Frappe-CSRF-Token': '{{ csfr_token }}'
+                },
+                success: function(r) {
                     posts = r.message;
-                    const row = document.querySelector('.capsule'); 
+                    
+                    console.log(posts);
                     posts.forEach(post => {
-            
                         const col = document.createElement('div');
-                        col.className = 'col';
-                      
-                        const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
-            
-                        // Update the innerHTML with the conditional thumbnail
-                        col.innerHTML = `
-                            <div class="col-md-3 col-sm-6 wow animated-longer-delay-2 fadeInDown ">
-                            <div class="panel">
-                                <div class="panel-body">
-                                <div class="col-xs-12">
-                                    <div class="avatar-team-member effects-container effects-enlarge">
-                                        <a href="#">
-                                        <img src="${thumbnailSrc}" alt="image">
-                                        </a>
-                                    </div>
-                                </div>
-                                        <h3>${post[0].substring(0, 30)}</h3>
-                                        <div class="text-center">
-                                        <ul class="list-unstyled list-inline list-social-sq-primary">
-                                            <li><a href='/organisation?name=${post[0]}'><i class="fa fa-compass"></i>View</a></li>
-                                        
-                                        </ul>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>`;
+                        col.className = 'col-lg-4 col-md-6 col-sm-6';
                         
-                            row.appendChild(col);
-                  });
-            }
-                });
+                        const thumbnailSrc = post[3] ? `${post[3]}` : "images/organisation-placeholder.svg";
+                        const aim = post[1] ? `${post[1]}` : "None";
+                        col.innerHTML = `
+                             
+                            <div class="single-cases mb-40">
+                                <div class="cases-img">
+                                    <img src="${thumbnailSrc}" alt="">
+                                </div>
+                                <div class="cases-caption">
+                                    <h3><a href="/organisation?name=${post[0]}">${post[0].substring(0, 30)}</a></h3>
+                                    <!-- Progress Bar -->
+                                    <div class="single-skill mb-15">
+                                        <div class="bar-progress">
+                                            <div id="bar1" class="barfiller">
+                                                <div class="tipWrap">
+                                                    <span class="tip"></span>
+                                                </div>
+                                                <span class="fill" data-percentage="70"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / progress -->
+                                    <div class="prices d-flex justify-content-between">
+                                        <p>${aim.substring(0, 160)}</p>
+                                    </div>
+                                </div>
+                            </div>
+                       `;
+                        
+                            capsuleCard.appendChild(col);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
+                }
+            });
         
             });

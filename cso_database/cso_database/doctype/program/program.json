@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "program_currently_running",
-  "description"
+  "currently_running",
+  "description",
+  "start",
+  "end"
  ],
  "fields": [
   {
@@ -17,7 +20,7 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Program Currently Running"
+   "label": "Program "
   },
   {
    "fieldname": "description",
@@ -25,12 +28,33 @@
    "in_list_view": 1,
    "in_preview": 1,
    "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "currently_running",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Currently Running"
+  },
+  {
+   "depends_on": "eval: doc.currently_running",
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "Start"
+  },
+  {
+   "depends_on": "eval: doc.currently_running",
+   "fieldname": "end",
+   "fieldtype": "Date",
+   "label": "End"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-11-13 06:23:35.338361",
+ "modified": "2024-12-14 08:50:41.509504",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "program",
