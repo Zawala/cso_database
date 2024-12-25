@@ -25,6 +25,7 @@
   "phone_number",
   "phone_number_alt",
   "column_break_edgg",
+  "organisation_gmail",
   "email_address",
   "email_address_alt",
   "section_break_muur",
@@ -321,11 +322,16 @@
    "label": "thematic_areas",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "organisation_gmail",
+   "fieldtype": "Data",
+   "label": "Organisation Gmail"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-14 08:46:51.054411",
+ "modified": "2024-12-25 15:38:23.206894",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",

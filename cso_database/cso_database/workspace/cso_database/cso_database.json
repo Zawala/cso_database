@@ -46,7 +46,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Data Capture",
-   "link_count": 1,
+   "link_count": 2,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -60,9 +60,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "LInks Dispatched",
+   "link_count": 0,
+   "link_to": "Sent Link",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-11-15 06:38:08.037294",
+ "modified": "2024-12-25 16:46:05.485502",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Cso Database",
