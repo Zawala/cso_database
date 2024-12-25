@@ -19,7 +19,19 @@ class Organisation(Document):
 		for thematic in self.table_lozm:
 			thematic_areas.append(thematic.thermatic_area)
 		self.thematic_areas=str(thematic_areas)
+  
+	def add_as_user(self):
+		if not frappe.db.exists("User", self.organisation_gmail):
+			user = frappe.get_doc({
+				"doctype":"User",
+				"first_name":self.name1,
+				"email":self.organisation_gmail
 
+			})
+			user.flags.no_welcome_mail= "true"
+			user.flags.ignore_permissions="true"
+			user.add_roles("Organisation User")
+   
 	def create_link(self):
 		if (frappe.db.exists("Sent Link", {'userid':self.name})):
 			old_link = frappe.get_doc("Sent Link", {'userid':self.name})

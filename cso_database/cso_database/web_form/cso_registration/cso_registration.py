@@ -10,7 +10,8 @@ def get_context(context):
 	if context.reference_name:
 		print(frappe.session.user)
 		org=frappe.get_doc("Organisation",context.reference_name)
-		if (frappe.session.user!=org.organisation_gmail) and (frappe.session.user!="Administrator"):
+  
+		if (frappe.session.user!=org.organisation_gmail) and ("System Manager" not in frappe.get_roles()):
 			frappe.redirect_to_message(
 			_("Not Organisation User"),
 			_("Looks like the gmail used is not linked to the organisation."),
