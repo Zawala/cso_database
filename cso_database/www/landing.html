@@ -133,57 +133,57 @@
     <div class="container">
         
         <div id="owl-jobs" class="owl-carousel owl-theme">
-            <div class="job-items" style="width: 300px;">
+            <div class="job-items owl-item" style="width: 300px;">
                 <div class="company-img">
                     <a href="#"><img src="charity/img/collab/FACT-Logo-2023-v-1.png" alt="" style="height: 100px;width: 100px; object-fit: contain;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="#"><h4>Family AIDS Caring Trust</h4></a>
+                    <a href="#"><h4>Family AIDS Caring Trust</h4></a><br>
                     <ul>
                         <li><i class="fa fa-info-circle"></i>FACT Zimbabwe is a Christian-based organisation instituted in 1987 as Zimbabwe's first AIDS Service Organisation pioneering the HIV response in Zimbabwe.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="job-items" style="width: 300px;">
+            <div class="job-items owl-item" style="width: 300px;">
                 <div class="company-img">
                     <a href="#"><img src="charity/img/collab/global fund logo.jpg" alt="" style="height: 100px;width: 100px; object-fit: contain;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="#"><h4>Global Fund</h4></a>
+                    <a href="#"><h4>Global Fund</h4></a><br>
                     <ul>
                         <li><i class="fa fa-info-circle"></i>The Global Fund invests US$4 billion a year to defeat HIV, TB and malaria and ensure a healthier, safer, equitable future for all.</li>
                     </ul>
                 </div>
             </div>
-            <div class="job-items" style="width: 300px;">
+            <div class="job-items owl-item" style="width: 300px;">
                 <div class="company-img">
                     <a href="#"><img src="charity/img/collab/NAC-logo-1.png" alt="" style="height: 100px;width: 100px; object-fit: contain;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="#"><h4>National AIDS Council</h4></a>
+                    <a href="#"><h4>National AIDS Council</h4></a><br>
                     <ul>
                         <li><i class="fa fa-info-circle"></i>An organization established through the Act of Parliament of 1999 to coordinate and facilitate the national multi-sectoral response to HIV and AIDS.</li>
                     </ul>
                 </div>
             </div>
-            <div class="job-items" style="width: 300px; ">
+            <div class="job-items owl-item" style="width: 300px; ">
                 <div class="company-img">
                     <a href="#"><img src="charity/img/collab/undp-logo-blue.svg" alt="" style="height: 100px;width: 100px; object-fit: contain;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="#"><h4>United Nations Development Programme</h4></a>
+                    <a href="#"><h4>United Nations Development Programme</h4></a><br>
                     <ul>
                         <li><i class="fa fa-info-circle"></i>UNDP works to eradicate poverty and reduce inequalities through the sustainable development of nations, in more than 170 countries and territories.</li>
                     </ul>
                 </div>
             </div>
-            <div class="job-items" style="width: 300px;">
+            <div class="job-items owl-item" style="width: 300px;">
                 <div class="company-img">
                     <a href="#"><img src="charity/img/collab/zan.jpg" alt="" style="height: 100px;width: 100px; object-fit: contain;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="#"><h4>Zimbabwe Aids Network </h4></a>
+                    <a href="#"><h4>Zimbabwe Aids Network </h4></a><br>
                     <ul>
                         <li><i class="fa fa-info-circle"></i>A membership driven network to coordinate Civil Society Organizations (CSOs) response to the HIV/AIDS pandemic</li>
                         
@@ -202,8 +202,8 @@
     <div class="service-area section-padding30">
         <div class="container">
             
-            <div class="owl-carousel owl-theme">
-                <article class="blog_item">
+            <div id="show_case" class="owl-carousel owl-theme">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide6.jpeg" alt="">
                         
@@ -217,7 +217,7 @@
                     </div>
                 </article>
 
-                <article class="blog_item">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide5.jpeg" alt="">
                         
@@ -233,7 +233,7 @@
                 </article>
 
 
-                <article class="blog_item">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide4.jpeg" alt="">
                         
@@ -249,7 +249,7 @@
                 </article>
 
 
-                <article class="blog_item">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide3.jpeg" alt="">
                         
@@ -265,7 +265,7 @@
 
 
                 
-                <article class="blog_item">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide1.jpeg" alt="">
                         
@@ -281,7 +281,7 @@
 
 
                 
-                <article class="blog_item">
+                <article class="blog_item owl-item">
                     <div class="blog_item_img">
                         <img class="card-img rounded-0" src="charity/img/gallery/slide2.jpeg" alt="">
                        
@@ -475,7 +475,7 @@
     <script src="./charity/js/plugins.js"></script>
     <script src="./charity/js/main.js"></script>
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('#show_case').owlCarousel({
             items:2,
             nav:true,
             autoplay:true,
@@ -485,8 +485,26 @@
             margin:10
         });
         $('#owl-jobs').owlCarousel({
-            items:5,
+            items:3,
             nav:false,
+            responsive:{
+                    0:{
+                        items:1,
+                        stagePadding:100,
+                        margin:10
+                    },
+                    600:{
+                        items:2,
+                        stagePadding:100,
+                        margin:10
+                    },
+                    1000:{
+                        items:3,
+                        stagePadding:100,
+                        margin:10
+                    }
+                },
+            center:true,
             autoplay:true,
             stagePadding:100,
             lazyLoad:true,
