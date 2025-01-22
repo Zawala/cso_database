@@ -73,6 +73,8 @@ def generate_gmails():
 						 fields=['Name', 'email_address',  'organisation_gmail'],
 								 )
 	for org in organisations:
-		doc=frappe.get_doc('Organisation', org['Name'])
-		doc.db_set('published', True)
+		if org['email_address']:
+			if "gmail" in org['email_address']:
+				doc=frappe.get_doc('Organisation', org['Name'])
+				doc.db_set('organisation_gmail', org['email_address'])
     
