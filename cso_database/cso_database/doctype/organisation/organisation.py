@@ -54,4 +54,16 @@ class Organisation(Document):
 def generate_link(name):
     customer=frappe.get_doc("Organisation",name)
     customer.create_link()
+
+
+@frappe.whitelist()
+def generate_gmails():
+	organisations=frappe.db.get_all('Organisation',
+						 fields=['Name', 'email_address',  'organisation_gmail'],
+								 )
+	for org in organisations:
+		if org['email_address']:
+			if "gmail" in org['email_address']:
+				doc=frappe.get_doc('Organisation', org['Name'])
+				doc.db_set('organisation_gmail', org['email_address'])
     
