@@ -21,5 +21,22 @@ frappe.ui.form.on("Organisation", {
                     }, 'primary');
                     
             },);
+            frm.add_custom_button(__('Publish'), function(frm){
+                if (cur_frm.is_dirty()) {
+                    frappe.show_alert('Save Link Doctype First')
+                }
+                frappe.call({
+                    method: "cso_database.cso_database.doctype.organisation.organisation.publish",
+                    args: {
+                        'name': cur_frm.doc.name,
+                        
+                    },
+                    freeze: true,
+                    callback: function(r) {
+                        frappe.msgprint('Published Toggled')
+                            }
+                        }, 'primary');
+                        
+                },);
         }
 });

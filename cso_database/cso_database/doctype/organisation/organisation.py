@@ -19,6 +19,9 @@ class Organisation(Document):
 		for thematic in self.table_lozm:
 			thematic_areas.append(thematic.thermatic_area)
 		self.thematic_areas=str(thematic_areas)
+
+		if ("System Manager" not in frappe.get_roles()):
+			self.published=False
   
 	def add_as_user(self):
 		if not frappe.db.exists("User", self.organisation_gmail):
@@ -55,6 +58,14 @@ def generate_link(name):
     customer=frappe.get_doc("Organisation",name)
     customer.create_link()
 
+@frappe.whitelist()
+def publish(name):
+    doc=frappe.get_doc("Project",name)
+    if not doc.published:
+        doc.published=True
+    else:
+        doc.published=False
+    doc.save(ignore_permissions=True)
 
 @frappe.whitelist()
 def generate_gmails():
@@ -62,8 +73,6 @@ def generate_gmails():
 						 fields=['Name', 'email_address',  'organisation_gmail'],
 								 )
 	for org in organisations:
-		if org['email_address']:
-			if "gmail" in org['email_address']:
-				doc=frappe.get_doc('Organisation', org['Name'])
-				doc.db_set('organisation_gmail', org['email_address'])
+		doc=frappe.get_doc('Organisation', org['Name'])
+		doc.db_set('published', True)
     

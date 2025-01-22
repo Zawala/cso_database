@@ -14,6 +14,7 @@
   "organizational_name",
   "column_break_ajnf",
   "acronym",
+  "published",
   "registration_section",
   "status",
   "registration_type",
@@ -327,11 +328,18 @@
    "fieldname": "organisation_gmail",
    "fieldtype": "Data",
    "label": "Organisation Gmail"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-25 15:38:23.206894",
+ "modified": "2025-01-22 06:38:40.917819",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",
