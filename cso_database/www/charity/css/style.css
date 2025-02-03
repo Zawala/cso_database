@@ -197,6 +197,19 @@ body {
   font-size: 16px;
 }
 
+.logo {
+  height: 40%; /* Make the logo container take the full height of its parent */
+  display: flex; /* Use flexbox to center the image vertically and horizontally */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.logo img {
+  height: 100%; /* Make the image height 100% of its parent */
+  width: auto; /* Allow the width to adjust automatically to maintain aspect ratio */
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
 /* line 10, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
 h1,
 h2,

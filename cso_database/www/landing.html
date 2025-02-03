@@ -64,7 +64,9 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="imahgges/logo.png" alt=""></a>
+                                    <a href="index.html">
+                                        <img src="charity/img/collab/zan.jpg" alt="">
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -476,32 +478,33 @@
     <script src="./charity/js/main.js"></script>
     <script>
         $('#show_case').owlCarousel({
-            items:2,
-            nav:true,
-            autoplay:true,
-            stagePadding:100,
-            lazyLoad:true,
-            loop:true,
-            margin:10
-        });
+                items: 2,
+                nav: true,
+                autoplay: true,
+                stagePadding: 100,
+                lazyLoad: true,
+                loop: true,
+                margin: 10,
+                responsive: {
+                    0: {
+                        items: 1, // For screens less than 1200px width, show 1 item
+                        stagePadding: 50 // Adjust stagePadding for smaller screens if needed
+                    },
+                    1200: {
+                        items: 2 // For screens 1200px and wider, show 2 items
+                    }
+                }
+            });
         $('#owl-jobs').owlCarousel({
             items:3,
             nav:false,
-            responsive:{
-                    0:{
-                        items:1,
-                        stagePadding:100,
-                        margin:10
+            responsive: {
+                    0: {
+                        items: 1, // For screens less than 1200px width, show 1 item
+                        stagePadding: 50 // Adjust stagePadding for smaller screens if needed
                     },
-                    600:{
-                        items:2,
-                        stagePadding:100,
-                        margin:10
-                    },
-                    1000:{
-                        items:3,
-                        stagePadding:100,
-                        margin:10
+                    1200: {
+                        items: 2 // For screens 1200px and wider, show 2 items
                     }
                 },
             center:true,
