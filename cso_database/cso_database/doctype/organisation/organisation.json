@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:organizational_name",
  "creation": "2024-08-28 12:03:17.023028",
@@ -85,8 +87,7 @@
   {
    "fieldname": "acronym",
    "fieldtype": "Data",
-   "label": "Acronym",
-   "reqd": 1
+   "label": "Acronym"
   },
   {
    "fieldname": "registration_section",
@@ -97,8 +98,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status ",
-   "options": "Registered\nNot Registered",
-   "reqd": 1
+   "options": "Registered\nNot Registered"
   },
   {
    "fieldname": "column_break_dzaq",
@@ -117,8 +117,7 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
-   "label": "Phone Number",
-   "reqd": 1
+   "label": "Phone Number"
   },
   {
    "fieldname": "column_break_edgg",
@@ -127,8 +126,7 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address",
-   "reqd": 1
+   "label": "Email Address"
   },
   {
    "fieldname": "section_break_muur",
@@ -138,8 +136,7 @@
    "fieldname": "social_media_handles",
    "fieldtype": "Table",
    "label": "Social Media Handles",
-   "options": "Social Media Handles",
-   "reqd": 1
+   "options": "Social Media Handles"
   },
   {
    "fieldname": "location_section",
@@ -154,8 +151,7 @@
   {
    "fieldname": "table_nnex",
    "fieldtype": "Table",
-   "options": "Contact Person",
-   "reqd": 1
+   "options": "Contact Person"
   },
   {
    "fieldname": "about_information_section",
@@ -165,8 +161,7 @@
   {
    "fieldname": "year_of_establishment",
    "fieldtype": "Int",
-   "label": "Year of Establishment",
-   "reqd": 1
+   "label": "Year of Establishment"
   },
   {
    "fieldname": "column_break_mlip",
@@ -219,14 +214,12 @@
   {
    "fieldname": "background",
    "fieldtype": "Long Text",
-   "label": "Background",
-   "reqd": 1
+   "label": "Background"
   },
   {
    "fieldname": "aim_core_business",
    "fieldtype": "Long Text",
-   "label": "Aim (Core Business)",
-   "reqd": 1
+   "label": "Aim (Core Business)"
   },
   {
    "fieldname": "column_break_xgkq",
@@ -235,8 +228,7 @@
   {
    "fieldname": "mission",
    "fieldtype": "Long Text",
-   "label": "Mission",
-   "reqd": 1
+   "label": "Mission"
   },
   {
    "fieldname": "vision",
@@ -253,8 +245,7 @@
    "fieldname": "location",
    "fieldtype": "Table",
    "label": "Location",
-   "options": "Location",
-   "reqd": 1
+   "options": "Location"
   },
   {
    "fieldname": "registration_type",
@@ -304,8 +295,7 @@
   {
    "fieldname": "logo",
    "fieldtype": "Attach Image",
-   "label": "Logo",
-   "reqd": 1
+   "label": "Logo"
   },
   {
    "fieldname": "provinces",
@@ -327,7 +317,8 @@
   {
    "fieldname": "organisation_gmail",
    "fieldtype": "Data",
-   "label": "Organisation Gmail"
+   "label": "Organisation Gmail",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -339,7 +330,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-22 06:38:40.917819",
+ "modified": "2025-02-03 05:14:44.168177",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",

@@ -22,12 +22,13 @@ class Organisation(Document):
 
 		if ("System Manager" not in frappe.get_roles()):
 			self.published=False
+		self.add_as_user()
   
 	def add_as_user(self):
 		if not frappe.db.exists("User", self.organisation_gmail):
 			user = frappe.get_doc({
 				"doctype":"User",
-				"first_name":self.name1,
+				"first_name":self.organizational_name,
 				"email":self.organisation_gmail
 
 			})
