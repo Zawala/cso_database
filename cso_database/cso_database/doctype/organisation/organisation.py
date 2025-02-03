@@ -40,11 +40,12 @@ class Organisation(Document):
 		if (frappe.db.exists("Sent Link", {'userid':self.name})):
 			old_link = frappe.get_doc("Sent Link", {'userid':self.name})
 			old_link.delete(ignore_permissions=True)
-		
+		if not self.organisation_gmail:
+			frappe.throw("Gmail Link Required")
 		link = frappe.new_doc("Sent Link")
+		link.email= self.organisation_gmail
 		link.save(ignore_permissions=True)
 		link.msgid = link.name
-		link.email= self.organisation_gmail
 		link.userid = self.name
 		link.datesent = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 		link.status = 'Active'
