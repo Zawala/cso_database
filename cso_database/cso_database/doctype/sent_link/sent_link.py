@@ -8,7 +8,8 @@ from frappe.model.document import Document
 class SentLink(Document):
 
     def before_save(self):
-        self.send_link_email()\
+        if self.link:
+            self.send_link_email()\
         
     def send_link_email(self):
         message = f"""
