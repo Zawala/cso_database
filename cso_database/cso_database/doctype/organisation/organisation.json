@@ -328,9 +328,10 @@
    "read_only": 1
   }
  ],
+ "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-03 21:47:53.610903",
+ "modified": "2025-02-08 07:19:34.236082",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "Organisation",
@@ -356,6 +357,7 @@
    "read": 1,
    "report": 1,
    "role": "Organisation User",
+   "select": 1,
    "share": 1,
    "write": 1
   }
