@@ -80,3 +80,12 @@ def generate_gmails():
 				doc=frappe.get_doc('Organisation', org['Name'])
 				doc.db_set('organisation_gmail', org['email_address'])
     
+@frappe.whitelist()
+def send_gmails():
+	organisations=frappe.db.get_all('Organisation',
+						 fields=['Name', 'organisation_gmail'],
+								 )
+	for org in organisations:
+		if org['organisation_gmail']:
+			doc=frappe.get_doc('Organisation', org['Name'])
+			doc.create_link()
