@@ -62,7 +62,7 @@ def generate_link(name):
 
 @frappe.whitelist()
 def publish(name):
-    doc=frappe.get_doc("Project",name)
+    doc=frappe.get_doc("Organisation",name)
     if not doc.published:
         doc.published=True
     else:
