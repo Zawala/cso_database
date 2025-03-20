@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "hash",
  "creation": "2024-10-26 17:00:12.878501",
  "doctype": "DocType",
@@ -55,7 +54,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-09 18:11:23.291738",
+ "modified": "2025-03-20 06:34:51.503848",
  "modified_by": "Administrator",
  "module": "Cso Database",
  "name": "program",
